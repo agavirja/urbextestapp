@@ -123,7 +123,7 @@ def display_transacciones_polygon(dataprocesos=pd.DataFrame(),datalotespolygon=p
             <html>
                 <body>
                     <div id="popupContent" style="cursor:pointer; display: flex; flex-direction: column; flex: 1;width:200px;">
-                        <a href="https://urbexapp.streamlit.app/Due_dilligence_digital?code={items['barmanpre']}&variable=barmanpre" target="_blank" style="color: black;">
+                        <a href="https://urbextestapp.streamlit.app/Due_dilligence_digital?code={items['barmanpre']}&variable=barmanpre" target="_blank" style="color: black;">
                             <b> Direccion:</b> {items['direccion']}<br>
                             {areaconstruida}
                             {areaterreno}
