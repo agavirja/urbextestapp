@@ -26,10 +26,14 @@ def main(inputvar):
     
     if 'tiporeporte' in inputvar:
         if 'predio' in inputvar['tiporeporte'].lower():
-            reporte_predio(inputvar)
+            with st.spinner('Buscando información'):
+                reporte_predio(inputvar)
         elif 'building' in inputvar['tiporeporte'].lower():
-            reporte_building(inputvar)
+            with st.spinner('Buscando información'):
+                reporte_building(inputvar)
         elif 'radio' in inputvar['tiporeporte'].lower():
-            reporte_radio(inputvar)
+            with st.spinner('Buscando información'):
+                reporte_radio(inputvar)
         elif 'pot' in inputvar['tiporeporte'].lower():
-            reporte_pot(inputvar)
+            with st.spinner('Buscando información'):
+                reporte_pot(inputvar)

@@ -11,6 +11,7 @@ from scripts.getcatastropolygon import getcatastropolygon
 from scripts.groupcatastro import groupcatastro
 from scripts.merge_snr_lotes import merge_snr_lotes
 from scripts.getlatlng import getlatlng
+from scripts.inmuebleANDusosuelo import usosuelo2inmueble,inmueble2usosuelo
 
 def splitdate(x,pos):
     try: return int(x.split('-')[pos].strip())
@@ -31,6 +32,12 @@ def getinfopredialpolygon(inputvar):
         areamax = inputvar['areamax']
     if 'precuso' in inputvar:
         precuso = inputvar['precuso']
+        
+    # Para ampliar la muestra, seleccionar todos los precuso acordes al tipo del inmueble: Por ejemplo, si es comercio NPH me compara solo con NPH, pero podemos traer todo lo que es comercio
+    if precuso!=[]:
+        typeinm = usosuelo2inmueble(precuso)
+        precuso = inmueble2usosuelo(typeinm)
+    
     datacatastro,datalotes = getcatastropolygon(polygon=polygon,precuso=precuso,areamin=areamin,areamax=areamax)
     
     #-----------------#
