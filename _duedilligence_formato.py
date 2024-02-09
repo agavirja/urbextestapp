@@ -21,7 +21,7 @@ def main(inputvar):
         if st.button('Nueva busqueda'):
             st.session_state.reporte_duedilligence = False
             st.session_state.inputvar_duedilligence = {}
-            webbrowser.open("http://localhost:8501/Due_dilligence_digital")
+            webbrowser.open("http://urbextestapp.streamlit.app/Due_dilligence_digital")
             st.rerun()
     
     if 'tiporeporte' in inputvar:

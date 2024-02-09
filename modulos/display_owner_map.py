@@ -32,7 +32,7 @@ def display_owner_map(data,latitud,longitud):
             <html>
                 <body>
                     <div id="popupContent" style="cursor:pointer; display: flex; flex-direction: column; flex: 1;width:200px;">
-                        <a href="http://localhost:8501/Due_dilligence_digital?code={items['barmanpre']}&variable=barmanpre" target="_blank" style="color: black;">
+                        <a href="http://urbextestapp.streamlit.app/Due_dilligence_digital?code={items['barmanpre']}&variable=barmanpre" target="_blank" style="color: black;">
                             {titular}
                             {direccion}
                             {barrio}

@@ -9,22 +9,22 @@ st.set_page_config(layout='wide')
 #------------#
 # Powersheel #
 
-# Archivos donde esta la palabra "urbextestapp.streamlit.app" o "localhost:8501"
+# Archivos donde esta la palabra "urbextestapp\.streamlit\.app" o "urbextestapp\.streamlit\.app"
 
 # opcion 1
 # Get-ChildItem -Path D:\Dropbox\Empresa\Empresa_Data\_APP -Recurse -Filter *.py | ForEach-Object { if (Get-Content $_.FullName | Select-String -Pattern 'urbextestapp\.streamlit\.app' -Quiet) { $_.FullName } }
 
 # opcion 2
-# Get-ChildItem -Path D:\Dropbox\Empresa\Empresa_Data\_APP -Recurse -Filter *.py | ForEach-Object { if (Get-Content $_.FullName | Select-String -Pattern 'urbextestapp.streamlit.app' -Quiet) { $_.FullName } }
+# Get-ChildItem -Path D:\Dropbox\Empresa\Empresa_Data\_APP -Recurse -Filter *.py | ForEach-Object { if (Get-Content $_.FullName | Select-String -Pattern 'urbextestapp\.streamlit\.app' -Quiet) { $_.FullName } }
 
 # opcion 3
 # Get-ChildItem -Path D:\Dropbox\Empresa\Empresa_Data\_APP -Recurse -Filter *.py | ForEach-Object { if (Get-Content $_.FullName | Select-String -Pattern 'localhost' -Quiet) { $_.FullName } }
 
 
-# Reemplazar "urbextestapp.streamlit.app" por "localhost:8501" o al reves en los archivos donde esta la palabra
+# Reemplazar "urbextestapp\.streamlit\.app" por "urbextestapp\.streamlit\.app" o al reves en los archivos donde esta la palabra
 
 #Get-ChildItem -Path D:\Dropbox\Empresa\Empresa_Data\_APP -Recurse -Filter *.py | ForEach-Object {
 #    (Get-Content $_.FullName) | ForEach-Object {
-#        $_ -replace 'urbextestapp\.streamlit\.app', 'localhost:8501'
+#        $_ -replace 'urbextestapp\.streamlit\.app', 'urbextestapp\.streamlit\.app'
 #    } | Set-Content $_.FullName
 #}
