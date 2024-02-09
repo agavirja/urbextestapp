@@ -20,11 +20,9 @@ def main(inputvar):
     
     if code is not None and tipoinmueble is not None and tiponegocio is not None:
         reporte(code,tipoinmueble,tiponegocio)
-        
     else:
-        if code is None and tiponegocio is None and tipoinmueble is None:
-            st.session_state.code           = st.text_input('Código',value=code)
-            st.session_state.tipoinmueble   = st.selectbox('Tipo de inmueble',options=['Apartamento','Casa',''])
-            st.session_state.tiponegocio    = st.selectbox('Tipo de Negocio',options=['Venta','Arriendo',''])
-            st.session_state.ficha_inputvar = {'code':st.session_state.code,'tiponegocio':st.session_state.tiponegocio,'tipoinmueble':st.session_state.tipoinmueble}
-            st.experimental_rerun()
+        st.session_state.code           = st.text_input('Código',value=code)
+        st.session_state.tipoinmueble   = st.selectbox('Tipo de inmueble',options=['Apartamento','Casa',''])
+        st.session_state.tiponegocio    = st.selectbox('Tipo de Negocio',options=['Venta','Arriendo',''])
+        st.session_state.ficha_inputvar = {'code':st.session_state.code,'tiponegocio':st.session_state.tiponegocio,'tipoinmueble':st.session_state.tipoinmueble}
+        st.experimental_rerun()
