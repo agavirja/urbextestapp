@@ -20,3 +20,4 @@ scikit-learn
 unidecode 
 openpyxl
 streamlit_aggrid
+geopy
